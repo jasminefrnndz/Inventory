@@ -1,0 +1,31 @@
+body{
+    background-color: #262626;
+    overflow: hidden;
+}
+.center_align{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+.img{
+    text-align: center;
+    margin-top: 50px;
+}  
+
+.bg {
+    /* The image used */
+    background-image: url("../img/welcome.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .brlarge {
+    display: block;
+    margin-bottom: 39em;
+}
