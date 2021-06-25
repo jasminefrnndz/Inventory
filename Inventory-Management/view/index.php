@@ -25,7 +25,7 @@ $currentPage = 'user.php';
         <link rel="stylesheet" type="text/css" href="../css/navigation.css">
     </head>
 
-    <body scroll="yes" class = "bg">
+    <body scroll="yes" >
         <div class="indextopnav">
             <div class="col-sm-10">
             <p class = "txt"><button class="openbtn" onclick="openNav()">☰ &nbsp</button> <img src = "../img/cgLogo.jpg"> &nbsp Cha Guan House of Tea</p>
@@ -41,6 +41,9 @@ $currentPage = 'user.php';
                     <input  type="button" class="btn btn-danger pull-left" value="Register">
                 </a>
             </div>
+        </div>
+        <div class= "bg">
+           
         </div>
         <div id="mySidepanel" class="sidepanel">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a><br>
