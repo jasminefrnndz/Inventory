@@ -27,7 +27,9 @@ $currentPage = 'user.php';
 
     <body scroll="yes">
         <div class="indextopnav">
-            <div class="col-sm-10"><button class="openbtn" onclick="openNav()">☰ <img src = "../img/cgLogo.jpg"> Cha Guan</button></div>
+            <div class="col-sm-10">
+            <p class = "txt"><button class="openbtn" onclick="openNav()">☰ &nbsp</button>  <img src = "../img/cgLogo.jpg"> &nbsp Cha Guan House of Tea</p>
+            </div>
             <div class="col-sm-1">
                 <a href="login.php">
                     <input  type="button" class="btn btn-danger pull-right" value="&nbsp Login &nbsp">

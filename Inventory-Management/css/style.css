@@ -27,13 +27,13 @@ body{
 
   .brlarge {
     display: block;
-    margin-bottom: 36em;
+    margin-bottom: 35em;
 }
 
 .indextopnav {
     overflow: hidden;
     background-color: #786d6d;
-    padding :20px ;
+    padding :12px ;
   }
 
   .sidepanel  {
@@ -43,7 +43,7 @@ body{
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color:#262424;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -52,14 +52,15 @@ body{
   .sidepanel a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 20px;
     color: #818181;
     display: block;
     transition: 0.3s;
   }
   
   .sidepanel a:hover {
-    color: #f1f1f1;
+    color: #ff0000;
+    text-decoration: none;
   }
   
   .sidepanel .closebtn {
@@ -70,11 +71,17 @@ body{
   }
   
   .openbtn {
-    font-size: 15px;
     cursor: pointer;
     background-color: #786d6d;
-    color: white;
-    padding: 5px 10px;
+    padding:0;
     border: none;
+    text-align: justify;
+    margin:0;
+  }
+
+  .txt{
+    font-size: 20px;
+    font-family:fantasy;
+    color: white;
   }
   
