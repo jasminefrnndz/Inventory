@@ -85,7 +85,7 @@
                     </div>
 
                     <button class="login-btn" type="submit" name="submit">Sign In</button>
-                    <p class="new-account">Not a user? <a href="registration.php">Sign Up now!</a></p>
+                    <p class="new-account">Don't have an account? <a href="registration.php">Sign Up now!</a></p>
                     <br>
 
                 </div>

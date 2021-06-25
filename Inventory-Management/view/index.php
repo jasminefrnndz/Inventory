@@ -14,6 +14,7 @@ $currentPage = 'user.php';
         <link type="text/css" rel="stylesheet" href="../css/style.css">
 
         <meta name="viewport" content="width=device-width, initial-scale=10" >
+        
 
         <!-- jQuery library -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -24,19 +25,37 @@ $currentPage = 'user.php';
         <link rel="stylesheet" type="text/css" href="../css/navigation.css">
     </head>
 
-    <body scroll="no" class = "bg">
-      <br>
-        <div class="col-sm-11">
-            <a href="login.php">
-                <input  type="button" class="btn btn-danger pull-right" value="Login">
-            </a>
-        </div>
+    <body scroll="yes">
+        <div class="indextopnav">
+            <div class="col-sm-10"><button class="openbtn" onclick="openNav()">☰ <img src = "../img/cgLogo.jpg"> Cha Guan</button></div>
+            <div class="col-sm-1">
+                <a href="login.php">
+                    <input  type="button" class="btn btn-danger pull-right" value="&nbsp Login &nbsp">
+                </a>
+            </div>
 
-        <div class="col-sm-1">
-            <a href="registration.php">
-                <input  type="button" class="btn btn-danger pull-left" value="Register">
-            </a>
+            <div class="col-sm-1">
+                <a href="registration.php">
+                    <input  type="button" class="btn btn-danger pull-left" value="Register">
+                </a>
+            </div>
         </div>
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+        <script>
+            function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px";
+            }
+
+            function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+            }
+        </script>
     <span class="brlarge"></span>
     <?php include('../model/footer.php')?>
     
