@@ -75,8 +75,11 @@ body{
     padding: 20px;
     text-align: center;
     background-color: #786d6d;
-    margin-top: 80px;
     color:white;
+    position: fixed;
+    margin-top: auto;
+    width: 100%;
+    bottom:0;
 }
 
 .href {

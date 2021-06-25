@@ -58,7 +58,6 @@ $currentPage = 'user.php';
             document.getElementById("mySidepanel").style.width = "0";
             }
         </script>
-    <span class="brlarge"></span>
     <?php include('../model/footer.php')?>
     
     </body>

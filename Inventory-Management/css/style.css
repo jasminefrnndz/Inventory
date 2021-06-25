@@ -1,6 +1,9 @@
 body{
     background-color: #262424;
     overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 .center_align{
     text-align: center;
@@ -14,7 +17,7 @@ body{
 
 .bg {
     /* The image used */
-    background-image: url("../img/welcome.jpg");
+    background-image: url("../img/welcome.jpeg");
   
     /* Full height */
     height: 100%;
