@@ -25,10 +25,10 @@ $currentPage = 'user.php';
         <link rel="stylesheet" type="text/css" href="../css/navigation.css">
     </head>
 
-    <body scroll="yes">
+    <body scroll="yes" class = "bg">
         <div class="indextopnav">
             <div class="col-sm-10">
-            <p class = "txt"><button class="openbtn" onclick="openNav()">☰ &nbsp</button>  <img src = "../img/cgLogo.jpg"> &nbsp Cha Guan House of Tea</p>
+            <p class = "txt"><button class="openbtn" onclick="openNav()">☰ &nbsp</button> <img src = "../img/cgLogo.jpg"> &nbsp Cha Guan House of Tea</p>
             </div>
             <div class="col-sm-1">
                 <a href="login.php">
@@ -43,7 +43,7 @@ $currentPage = 'user.php';
             </div>
         </div>
         <div id="mySidepanel" class="sidepanel">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a><br>
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Clients</a>
