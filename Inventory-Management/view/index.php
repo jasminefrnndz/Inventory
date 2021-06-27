@@ -5,7 +5,7 @@ $currentPage = 'user.php';
 ?>
 <html>
     <head>
-        <title>Welcome</title>
+        <title>Cha Guan House of Tea </title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -23,6 +23,7 @@ $currentPage = 'user.php';
         <!-- Latest compiled JavaScript -->
         <link rel="stylesheet" type="text/css" href="../css/product.css">
         <link rel="stylesheet" type="text/css" href="../css/navigation.css">
+        
     </head>
 
     <body scroll="yes" id = "main">

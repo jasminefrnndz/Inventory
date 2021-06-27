@@ -6,13 +6,24 @@
     include "navigation.php";
     $conn= connect();
 
-    if(isset($_GET['id'])){
+    $id= $_SESSION['userid'];
+
+   if(isset($_GET['id'])){
         $id= $_GET['id'];
+    } elseif($_POST['Submit']){
+        $id= $_POST['id'];
+        $sql= "DELETE FROM customers_info WHERE id='$id' limit 1";
+        $conn->query($sql);
+        header("Location: customer.php");
+    }
 
-        $sql= "SELECT * from customers_info WHERE id=$id limit 1";
-        $res= mysqli_fetch_assoc($conn->query($sql));
+    $sql= "SELECT * from customers_info WHERE id=$id limit 1";
+    $res= mysqli_fetch_assoc($conn->query($sql));
 
-        $img= $res['avatar'];
+    $img= $res['image'];
+
+    if($thisUser['is_admin']!=1){
+        header("Location: customer.php");
     }
 
 ?>
@@ -28,7 +39,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/product.css">
         <link rel="stylesheet" type="text/css" href="../css/navigation.css">
-        <title> Customers </title>
+        <title> Products </title>
     </head>
 
     <body>
@@ -38,10 +49,10 @@
                 <div class="pt-20 pl-20">
                     <div class="col-sm-12" style="background-color: white; border: solid rgb(0, 162, 255);">
                         <div class="text-center">
-                            <h1 style="color:#130553;"> Customer Details</h1>
+                            <h2 style="color:red;"> The customer will be deleted!!!</h2>
                         </div>
                         <div class="row p-20" >
-                            <div class="row col-sm-6">
+                        <div class="row col-sm-6">
                                 <div class="col-sm-6 p-20 pull-left" >
                                     <img src="<?php echo $img; ?>" height="250" width="250">
                                 </div>
@@ -88,13 +99,22 @@
                                     </h4>
                                 </div>
                             </div>
+                            <div class="row col-sm-6 text-center" style="padding: 20px">
+                                <form method="POST" action="deleteProduct.php">
+                                    <input type="hidden" value="<?php echo $res['id']; ?>" name="id">
+                                        <div class="row">
+                                            <div class="text-center">
+                                                <input class="btn btn-danger" type="submit" name="Submit" value="Delete">
+                                            </div>
+                                        </div>
+                                </form>                          
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <?php include('side_info.php')?>
         </div>
-        
         <?php include('footer.php')?>
     </body>
 </html>
