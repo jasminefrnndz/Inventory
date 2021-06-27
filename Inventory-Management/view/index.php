@@ -25,9 +25,9 @@ $currentPage = 'user.php';
         <link rel="stylesheet" type="text/css" href="../css/navigation.css">
     </head>
 
-    <body scroll="yes" >
+    <body scroll="yes" id = "main">
         <div class="indextopnav">
-            <div class="col-sm-10">
+            <div class="col-sm-10" >
             <p class = "txt"><button class="openbtn" onclick="openNav()">☰ &nbsp</button> <img src = "../img/cgLogo.jpg"> &nbsp Cha Guan House of Tea</p>
             </div>
             <div class="col-sm-1">
@@ -42,9 +42,7 @@ $currentPage = 'user.php';
                 </a>
             </div>
         </div>
-        <div class= "bg">
-           
-        </div>
+        <div class= "bg"></div>
         <div id="mySidepanel" class="sidepanel">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a><br>
             <a href="#">About</a>
@@ -54,11 +52,13 @@ $currentPage = 'user.php';
         </div>
         <script>
             function openNav() {
-            document.getElementById("mySidepanel").style.width = "250px";
+                document.getElementById("mySidepanel").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
             }
 
             function closeNav() {
-            document.getElementById("mySidepanel").style.width = "0";
+                document.getElementById("mySidepanel").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
             }
         </script>
     <?php include('../model/footer.php')?>

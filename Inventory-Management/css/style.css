@@ -49,7 +49,7 @@ body{
     background-color:#262424;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 40px;
   }
   
   .sidepanel a {
@@ -71,6 +71,16 @@ body{
     top: 0;
     right: 25px;
     font-size: 36px;
+  }
+
+  #main {
+    transition: margin-left .5s;
+    padding: 0px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidepanel {padding-top: 0px;}
+    .sidepanel a {font-size: 18px;}
   }
   
   .openbtn {
