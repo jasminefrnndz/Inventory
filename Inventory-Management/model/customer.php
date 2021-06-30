@@ -21,7 +21,7 @@
 
         if(in_array($actualFormat, $allowedFormats)){
             $location= 'Customers/'.$actualName.'.'.$actualFormat;
-            $sql= "INSERT INTO customers_info(name, type, shipping_address, avatar) VALUES ('$pName', '$type', '$shippingadd', '$location')";
+            $sql= "INSERT INTO customers_info(branch_name, type, shipping_address, avatar) VALUES ('$cName', '$type', '$shippingadd', '$location')";
             if($conn->query($sql)===true){
                 move_uploaded_file($tempName, $location);
                 $m= "Customer Inserted!";
@@ -128,7 +128,7 @@
                                    if(mysqli_num_rows($res)>0) {
                                     while ($row = mysqli_fetch_assoc($res)) {
                                         echo '<tr>';
-                                        echo '<td>'. $row['name'].'</td>';
+                                        echo '<td>'. $row['branch_name'].'</td>';
                                         echo '<td>'. $row['type'].'</td>';
                                         echo '<td>'. $row['email'].'</td>';
                                         echo "<td><a href='viewCustomer.php?id=".$row['id']."' class='btn btn-success btn-sm'>".

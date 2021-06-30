@@ -32,14 +32,12 @@ $currentPage = 'user.php';
             <p class = "txt"><button class="openbtn" onclick="openNav()">☰ &nbsp</button> <img src = "../img/cgLogo.jpg"> &nbsp Cha Guan House of Tea</p>
             </div>
             <div class="col-sm-1">
-                <a href="login.php">
-                    <input  type="button" class="btn btn-danger pull-right" value="&nbsp Login &nbsp">
-                </a>
+                
             </div>
 
             <div class="col-sm-1">
-                <a href="registration.php">
-                    <input  type="button" class="btn btn-danger pull-left" value="Register">
+                <a href="login.php">
+                    <input  type="button" class="btn btn-danger pull-right" value="&nbsp Login &nbsp">
                 </a>
             </div>
         </div>

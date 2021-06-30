@@ -49,7 +49,7 @@
                             <div class="row col-sm-6">
                                 <h4 class="pull-left col-sm-6">Name:</h4>
                                 <div class="col-sm-6">
-                                    <h4  class="pull-left" style="color: black;"><?php echo ucwords($res['name']) ?></h4>
+                                    <h4  class="pull-left" style="color: black;"><?php echo ucwords($res['branch_name']) ?></h4>
                                 </div>
                             </div>
                             <div class="row col-sm-6">
@@ -87,6 +87,11 @@
                                         ?>
                                     </h4>
                                 </div>
+                            </div>
+                            <div class="row  col-sm-6">
+                                <br><br>
+                                <a href = "customer.php"  class="btn btn-danger">Go Back</a>
+                                <br><br>
                             </div>
                         </div>
                     </div>

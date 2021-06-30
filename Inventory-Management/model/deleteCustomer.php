@@ -60,7 +60,7 @@
                             <div class="row col-sm-6">
                                 <h4 class="pull-left col-sm-6">Name:</h4>
                                 <div class="col-sm-6">
-                                    <h4  class="pull-left" style="color: black;"><?php echo ucwords($res['name']) ?></h4>
+                                    <h4  class="pull-left" style="color: black;"><?php echo ucwords($res['branch_name']) ?></h4>
                                 </div>
                             </div>
                             <div class="row col-sm-6">
@@ -103,8 +103,11 @@
                                 <form method="POST" action="deleteProduct.php">
                                     <input type="hidden" value="<?php echo $res['id']; ?>" name="id">
                                         <div class="row">
-                                            <div class="text-center">
+                                            <div class="col-sm-6">
+                                                <br><br>
                                                 <input class="btn btn-danger" type="submit" name="Submit" value="Delete">
+                                                <a href = "customer.php"  class="btn btn-warning">Cancel</a>
+                                                <br><br>
                                             </div>
                                         </div>
                                 </form>                          
