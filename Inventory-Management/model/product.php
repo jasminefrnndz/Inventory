@@ -9,7 +9,9 @@
 
     if(isset($_POST['submit'])){
         $pName= $_POST['pname'];
+        $price = $_POST['price'];
         $buy= $_POST['buy'];
+        $category= $_POST['category'];
         $img= $_FILES['pimage'];
         $iName= $img['name'];
         $tempName= $img['tmp_name'];
@@ -20,7 +22,7 @@
 
         if(in_array($actualFormat, $allowedFormats)){
             $location= 'Uploads/'.$actualName.'.'.$actualFormat;
-            $sql= "INSERT INTO products(name, bought, image, created_at) VALUES ('$pName', '$buy', '$location', current_timestamp())";
+            $sql= "INSERT INTO products(name, price, bought, category, image, created_at) VALUES ('$pName', '$price', '$buy', $category', '$location', current_timestamp())";
             if($conn->query($sql)===true){
                 move_uploaded_file($tempName, $location);
                 $m= "Product Inserted!";
@@ -78,10 +80,26 @@
                                             </div>
                                             <div class="form-group pt-20">
                                                 <div class="col-sm-4">
-                                                    <label for="buy" class="pr-10"> Buying Amount</label>
+                                                    <label for="price" class="pr-10"> Price</label>
                                                 </div>
                                                 <div class="col-sm-8">
-                                                    <input name="buy" type="text" class="login-input" placeholder="Buying Amount" id="buy" required>
+                                                    <input name="price" type="text" class="login-input" placeholder="Price" id="price" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group pt-20">
+                                                <div class="col-sm-4">
+                                                    <label for="buy" class="pr-10"> Quantity</label>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <input name="buy" type="text" class="login-input" placeholder="Quantity" id="buy" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group pt-20">
+                                                <div class="col-sm-4">
+                                                    <label for="category" class="pr-10"> Category</label>
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <input name="category" type="text" class="login-input" placeholder="Category" id="category" required>
                                                 </div>
                                             </div>
                                             <div class="form-group pt-20">
@@ -108,7 +126,8 @@
                                 <thead class="thead-light">
                                 <tr>
                                     <th data-field="name" data-filter-control="select" data-sortable="true">Product Name</th>
-                                    <th data-field="bought" data-filter-control="select" data-sortable="true"> Bought</th>
+                                    <th data-field="price" data-filter-control="select" data-sortable="true"> Price</th>
+                                    <th data-field="bought" data-filter-control="select" data-sortable="true"> Quantity</th>
                                     <th data-field="sold" data-sortable="true">Sold</th>
                                     <th data-field="stock" data-sortable="true">Available in Stock</th>
                                     <th data-field="actions" data-sortable="true"> Actions</th>
@@ -121,6 +140,8 @@
                                                 $stock= $row['bought']-$row['sold'];
                                                 echo "<tr>";
                                                 echo "<td>".$row['name']."</td>";
+
+                                                echo "<td>".$row['price']."</td>";
 
                                                 echo "<td>".$row['bought']."</td>";
 

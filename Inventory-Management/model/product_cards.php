@@ -25,7 +25,7 @@
     </head>
     <body>
          <div class="row">
-            <section style="padding: 20px;">
+            <section style="padding: 10px;">
                 <div class="col-sm-3">
                     <div class="card card-green">
                         <h3>Total<br>Products</h3>
