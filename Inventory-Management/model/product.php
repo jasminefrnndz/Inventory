@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     <div class="table_container">
-                        <h1 style="text-align: center; color:white;">Products Table</h1>
+                        <h1 style="text-align: center; color:gray;">Products Table</h1>
                         <div class="table-responsive">
                             <table class="table table-dark" id="table" data-toggle="table" data-search="true" data-filter-control="true" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                 <thead class="thead-light">
@@ -139,15 +139,15 @@
                                             while($row= mysqli_fetch_assoc($res)){
                                                 $stock= $row['bought']-$row['sold'];
                                                 echo "<tr>";
-                                                echo "<td>".$row['name']."</td>";
+                                                echo "<td style ='color :black;'>".$row['name']."</td>";
 
-                                                echo "<td>".$row['price']."</td>";
+                                                echo "<td style ='color :black;'>".$row['price']."</td>";
 
-                                                echo "<td>".$row['bought']."</td>";
+                                                echo "<td style ='color :black;'>".$row['bought']."</td>";
 
-                                                echo "<td>".$row['sold']."</td>";
+                                                echo "<td style ='color :black;'>".$row['sold']."</td>";
 
-                                                echo "<td>".$stock."</td>";
+                                                echo "<td style ='color :black;'>".$stock."</td>";
 
                                                 echo "<td><a href='viewProduct.php?id=".$row['id']."' class='btn btn-success btn-sm'>".
                                                     "<span class='glyphicon glyphicon-eye-open'></span> </a>";

@@ -32,11 +32,11 @@ body{
 
 /* Add a card effect for articles */
 .card{
-    background-color: #ad1f1f;
+    background-color: #ffffff;
     padding: 20px;
     margin-top: 20px;
-    color: whitesmoke;
-    border: solid #b85f5f;
+    color: rgb(51, 51, 51);
+    border: solid #9e3939;
     text-align: center;
 }
 
@@ -102,11 +102,11 @@ span {
 }
 
 h1, h2, h4, th{
-    color: rgb(0, 162, 255);
+    color: rgb(192, 68, 68);
 }
 
 td{
-    color: rgb(172, 42, 248) ;
+    color: rgb(255, 255, 255) ;
 }
 
 .white-text{

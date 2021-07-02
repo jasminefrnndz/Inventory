@@ -198,16 +198,16 @@
                                         while ($row = mysqli_fetch_assoc($res)) {
 
                                             echo '<tr>';
-                                            echo '<td>'. $row['name'].'</td>';
-                                            echo '<td>'. $row['email'].'</td>';
+                                            echo '<td style ="color :black;">'. $row['name'].'</td>';
+                                            echo '<td style ="color :black;">'. $row['email'].'</td>';
                                             if($row['is_active']=='1'){
                                                 $active= "Active";
                                             } else{
                                                 $active= "Inactive";
                                             }
-                                            echo '<td>' . $active . '</td>';
+                                            echo '<td style ="color :black;">' . $active . '</td>';
                                             if($thisUser['is_admin']==1) {
-                                                echo '<td>'. date("Y-m-d h:i:sa",strtotime($row['last_login_time'])).'</td>';
+                                                echo '<td style ="color :black;">'. date("Y-m-d h:i:sa",strtotime($row['last_login_time'])).'</td>';
                                                 echo "<td><a href='viewUser.php?id=".$row['id']."' class='btn btn-success btn-sm'>".
                                                     "<span class='glyphicon glyphicon-eye-open'></span> </a>";
                                             }

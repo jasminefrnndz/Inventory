@@ -128,9 +128,9 @@
                                    if(mysqli_num_rows($res)>0) {
                                     while ($row = mysqli_fetch_assoc($res)) {
                                         echo '<tr>';
-                                        echo '<td>'. $row['branch_name'].'</td>';
-                                        echo '<td>'. $row['type'].'</td>';
-                                        echo '<td>'. $row['email'].'</td>';
+                                        echo '<td style ="color :black;">'. $row['branch_name'].'</td>';
+                                        echo '<td style ="color :black;">'. $row['type'].'</td>';
+                                        echo '<td style ="color :black;">'. $row['email'].'</td>';
                                         echo "<td><a href='viewCustomer.php?id=".$row['id']."' class='btn btn-success btn-sm'>".
                                                 "<span class='glyphicon glyphicon-eye-open'></span> </a>";
                                         if($thisUser['is_admin']==1) {

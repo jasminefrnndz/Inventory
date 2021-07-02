@@ -32,12 +32,13 @@
                 <?php include('product_cards.php')?>
                 <div class="card">
                     <div class="table_container">
-                        <h1 style="text-align: center; color: white">Products Table</h1>
+                        <h1 style="text-align: center; color: gray">Products Table</h1>
                         <div class="table-responsive">
                             <table class="table table-dark" id="table" data-toggle="table" data-search="true" data-filter-control="true" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                 <thead class="thead-light">
                                     <tr>
                                         <th data-field="date" data-filter-control="select" data-sortable="true">Product Name</th>
+                                        <th data-field="examen" data-filter-control="select" data-sortable="true">Price</th>
                                         <th data-field="examen" data-filter-control="select" data-sortable="true"> Bought</th>
                                         <th data-field="note" data-sortable="true">Sold</th>
                                         <th data-field="note" data-sortable="true">Available in Stock</th>
@@ -49,13 +50,15 @@
                                             while($row= mysqli_fetch_assoc($prod)){
                                                 $stock= $row['bought']-$row['sold'];
                                                 echo "<tr>";
-                                                echo "<td>".$row['name']."</td>";
+                                                echo "<td style ='color :black;'>".$row['name']."</td>";
 
-                                                echo "<td>".$row['bought']."</td>";
+                                                echo "<td style ='color :black;'>".$row['price']."</td>";
 
-                                                echo "<td>".$row['sold']."</td>";
+                                                echo "<td style ='color :black;'>".$row['bought']."</td>";
 
-                                                echo "<td>".$stock."</td>";
+                                                echo "<td style ='color :black;'>".$row['sold']."</td>";
+
+                                                echo "<td style ='color :black;'>".$stock."</td>";
                                             }
                                         }
                                     ?>
